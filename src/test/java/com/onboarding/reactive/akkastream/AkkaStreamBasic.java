@@ -64,6 +64,25 @@ public class AkkaStreamBasic {
     }
 
     @Test
+    void should_put_giving_student_to_class_via_flow() throws ExecutionException, InterruptedException {
+        List<Student> students = IntStream.range(0, 23)
+            .mapToObj(i -> new Student())
+            .collect(Collectors.toList());
+
+        // todo: create flow to  put every 5 students in a class
+
+
+        CompletionStage<List<Clazz>> clazzCompletionStage = null;
+//            Source.from(students)
+//                .via(flow)
+//            .runWith(Sink.seq(), actorSystem);
+
+        List<Clazz> clazzes = clazzCompletionStage.toCompletableFuture().get();
+        assertEquals(5, clazzes.size());
+        assertEquals(3, clazzes.get(clazzes.size() - 1).getStudents().size());
+    }
+
+    @Test
     void should_get_student_count_in_given_clazz() throws ExecutionException, InterruptedException {
 
         // given
