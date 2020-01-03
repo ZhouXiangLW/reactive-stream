@@ -3,6 +3,7 @@ package com.onboarding.reactive.akkastream;
 import akka.actor.AbstractActor;
 import akka.actor.Props;
 import akka.pattern.Patterns;
+import com.onboarding.reactive.common.Clazz;
 import scala.concurrent.Future;
 
 public class ClazzActor extends AbstractActor {

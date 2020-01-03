@@ -1,4 +1,4 @@
-package com.onboarding.reactive.akkastream;
+package com.onboarding.reactive.common;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,9 @@
-package com.onboarding.reactive.akkastream;
+package com.onboarding.reactive.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.stream.IntStream;
 import static java.util.stream.Collectors.toList;
 
 @Data
+@Accessors(chain = true)
 @Builder
 @AllArgsConstructor
 public class Clazz {
@@ -18,6 +20,14 @@ public class Clazz {
     private int id;
 
     private boolean isArtClass;
+
+    private Integer addressId;
+
+    private String address;
+
+    private Integer headTeacherId;
+
+    private String headerTeacherName;
 
     private List<Student> students;
 

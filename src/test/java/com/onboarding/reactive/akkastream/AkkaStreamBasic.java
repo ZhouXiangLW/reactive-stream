@@ -11,6 +11,8 @@ import akka.stream.SourceShape;
 import akka.stream.javadsl.Keep;
 import akka.stream.javadsl.Sink;
 import akka.stream.javadsl.Source;
+import com.onboarding.reactive.common.Clazz;
+import com.onboarding.reactive.common.Student;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -90,7 +92,7 @@ public class AkkaStreamBasic {
 
         //when
         CompletionStage<Integer> integerCompletionStage = Source.from(clazzIds)
-            // todo： add operators to get student count in given class, get class via ClazzHelper.getClazzById(int)
+            // todo： add operators to get student count in given class, get class via ClazzHelper.getClazzSourceById(int)
             .runWith(Sink.last(), actorSystem);
 
         //  then
